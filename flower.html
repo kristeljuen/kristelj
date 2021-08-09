@@ -1,0 +1,1062 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">   
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Icon/logo-->
+    <link rel="icon" href="images/d.png" type="image/x-icon">
+    <title>Mini Plant Store</title>
+
+</head>
+
+<body>
+    <!--LoginModal-->
+    <div id="loginModal" class="col-sm-4 offset-4 modal fade" role="dialog" >
+        <div class=" modal-dialog " role="content">
+            <!--Modal Content-->
+            <div class="modal-content">
+                <div class="modal-header align-items-center">
+                    <img src="./images/d.png" style="width: 70px; height: 70px;">&nbsp;<h4 class="modal-title">Mini Plant<br>Store</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label class="sr-only" for="email">Email Address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="email" placeholder="Username or email address">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label class="sr-only" for="password">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="password" placeholder="Password">
+                            </div> 
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Forgot password?</label>
+                                </div>
+                                <div class="">Don't have any account yet? <a href="#">Sign up</a></div><br>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <button type="submit" class="btn btn-primar btn-block" style="background-color: skyblue;">Log-in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SHOP ICON-->
+    <a class="shopiconbtn" role="button" data-toggle="modal" data-target="#cart"><img class="fixed" src="images/aa.png" style="width: 70px; height: 70px;"><span class="badge total-count">0</span></a>
+    <!--SHOP MODAL-->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="cartmodal" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartmodal">CART</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                    <div>Total price: Php.<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="button">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="jumbotron">
+        <div class="container-fluid">    
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-dark navbar-expand-sm navbarheader">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand mr-auto" href="#"><img src="./images/d.png" height="100px" width="100px" alt="mpslogo"></a> <h1 class="d-none d-md-block ml-2">Ornamental <br> Plants Store</h1>                  
+                        <div class="collapse navbar-collapse" id="Navbar">                      
+                            <ul class="navbar-nav offset-3">
+                                <li class="nav-item offset-2 liheader"><a class="nav-link" href="index.html" style="color: #9dc5c3;"> Home</a></li>                   
+                                <li class="nav-item offset-2 liheader"><a class="nav-link" href="index.html #about" style="color: #9dc5c3;"> About</a></li>                    
+                                <li class="nav-item offset-2 liheader"><a class="nav-link" href="shop.html"> Shop</a></li>                   
+                                <li class="nav-item offset-2 liheader"><a class="nav-link" href="index.html #contact" style="color: #9dc5c3;"> Contact</a></li>           
+                            </ul>                  
+                        </div>
+                    </nav>
+                </div>
+            </div><br><br><br>
+
+            <div class="row row-content ml-auto">
+                <div class="col-12 col-md-8">
+                    <h1>A garden is a silent, loyal friend. And a great listner.</h1>
+                    <p>As a Plant Store, We offer the best and largest selection of live plants for your home or office.</p>
+                </div>
+                <div class="col-12 col-md align-self-center">
+                    <a id="loginButton" class="btn btn-block btn-info btn-lg" role="button">Login</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <!--Left Content-->
+        <div class="left col-12 col-md-3 row row-content">
+            <!--Categories-->
+            <div class="col-12">
+                <aside class="sidebar-categorie">
+                    <h3 class="sidebar-title">Categories</h3><hr>
+                    <ul class="navbar-nav" style="font-size: 17px;">
+                        <li class="nav-item"><a class="nav-link sidebaractive" href="#">Cacti and Succulents <span class="right">(5)</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="plants.html">Indoor/Outdoor Plants<span class="right">(3)</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="flower.html">Flowers<span class="right">(3)</span></a></li>
+                    </ul><br>
+                </aside>
+            </div>
+            <!--Top Products-->
+            <aside class="sidebar-topprod">
+                <h3 class="sidebar-title">Top Rated Products</h3>
+                <hr>
+                <ul class="list-unstyled">
+                    <a class="prod-thumd" href="../topprod/campfire.html">
+                        <li class="media">
+                            <img src="./images/plant82px2.jpg" alt="Campfire Crassula">
+                            <div class="media-body">
+                                <h5 class="prod-title">Campfire Crassula</h5>
+                                <div class="prod-pice">Php. 100.00</div>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a class="prod-thumd" href="../topprod/aglonema.html">
+                        <li class="media">
+                            <img src="./images/plant82px3.jpg" alt="Aglaonema">
+                            <div class="media-body">
+                                <h5 class="prod-title">Aglaonema ‘Valentine’</h5>
+                                <div class="prod-pice">Php. 150.00</div>
+                            </div>
+                        </li>
+                    </a>
+
+                    <a class="prod-thumd" href="../topprod/ghostplant.html">
+                        <li class="media">
+                            <img src="./images/plant82px.jpg" alt="Ghost Plant">
+                            <div class="media-body">
+                                <h5 class="prod-title">Graptopetalum 'Ghost Plant'</h5>
+                                <div class="prod-pice">Php. 200.00</div>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+            </aside>
+            
+            
+            <!--Certificates-->
+            <aside class="sidebar-certificates">
+                <h3 class="sidebar-title">Certificates</h3><hr>
+                <div class="col-12" style="display: inline-flex;"><div class="col-6"><a class="nav-link" href="certificates/html5.pdf" target="_blank" download type="button" ><img src="certificates/q.png" style=" height: 100px; width: 90px;" title="HTML 5"></a></div>
+                <div class="col-6"><a class="nav-link" href="certificates/css3.pdf" target="_blank" download type="button" ><img src="certificates/s.png" style=" height: 100px; width: 90px;" title="CSS 3"></a></div></div>
+                
+                <div class="col-12" style="display: inline-flex;"><div class="col-6"><a class="nav-link" href="certificates/java.pdf" target="_blank" download type="button" ><img src="certificates/as.png" style=" height: 100px; width: 90px;" title="JAVA"></a></div>
+                
+                <div class="col-6"><a class="nav-link" href="certificates/bootstrap4.pdf" target="_blank" download type="button" ><img src="certificates/r.png" style=" height: 100px; width: 90px;" title="Bootstrap 4"></a></div></div>
+            </aside>
+            <br>
+        </div>
+
+        <!--Right Content-->
+        <div class="right col-12 col-md-9 row row-content align-items-center">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Flowers</li>
+                    </ol>
+                </nav>
+            </div><br>
+
+           <!--Product 1-->
+           <div class="col-12 col-md-3 proditem align-items-center">
+            <div class="card" id="prod1formodal" title="Quick View" role="button">
+                <img src="images/plant250px1.jpg" alt="Ghost Plant">
+                <div class="card-body text-center"><h4 class="card-title">Banana</h4>
+                    <p class="card-text">Price: $1.22</p></div>
+            </div>
+            <a data-name="Ghost Plant" data-price="100" class="add-to-cart btn btn-info btn-block" role="button">Add to Cart</a>
+            
+            <!--Modal-->
+            <div id="prod1" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+                    <!--Modal Content-->
+                    <div class="modal-content">
+                        <button type="button" title="Close" class="close ml-auto" data-dismiss="modal" aria-label="Close" style="padding: 3px 10px 0px 0px">x</button>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="prodimage">
+                                        <img src="images/suc3.jpg" style="width: 300px;"  alt="Ghost Plant">
+                                        <a type="button" class="picture" style="margin-top: 10px;">
+                                            <img src="images/plant82px.jpg" alt="Ghost Plant 1" style=" height: 60px; width: 70px;">
+                                        </a>
+                                        <a type="button" class="picture">
+                                            <img src="images/plant82px.jpg" alt="Ghost Plant 2" style=" height: 60px; width: 70px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="pricewrapper">
+                                        <div class="price">
+                                            <h3>Ghost Plant</h3>
+                                            <span class="newprice">
+                                                <span class="p"  style="font-size: 21px;">Php. 75.00</span>
+                                                <span class="sr-only">Sale Price</span>
+                                            </span>
+                                            <span class="oldprice">
+                                                <span class="p" style="text-decoration: line-through; color: dimgrey; font-size: 16px;">Php. 100.00</span>
+                                                <span class="sr-only">Regular Price</span>
+                                            </span>
+                                        </div>
+                                    </div><hr>
+                                    <div class="prod-details">
+                                        This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent.
+                                    </div>
+                                    <div class="number ml-auto">
+                                        <div><label for="qty" style="font-weight: 700;">Quantity</label></div>
+                                        <span class="minus">-</span>
+                                        <input class="carmel" type="number" value="1">
+                                        <span class="plus">+</span>
+                                    </div>
+                                    <div class="addtocart">
+                                        <button data-mobile="true" data-hook="add-to-cart" class="atcbtnmodal btn" type="button"><span>Add to Cart</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal-->
+        </div>
+        <!--Product 2-->
+        <div class="col-12 col-sm-3 proditem">
+            <div class="card" id="prod2formodal" title="Quick View" role="button" >
+                <img src="images/plant250px2.jpg" alt="succulent1">
+                <div class="card-body text-center">Succulent 2<br>Php. 150.00
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>   
+            </div>
+            <a href="#" data-name="Product 2" data-price="100" class="add-to-cart btn btn-info btn-block"  role="button">Add to Cart</a>
+
+             <!--Modal-->
+             <div id="prod2" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+                    <!--Modal Content-->
+                    <div class="modal-content">
+                        <button type="button" title="Close" class="close ml-auto" data-dismiss="modal" aria-label="Close" style="padding: 3px 10px 0px 0px">x</button>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="prodimage">
+                                        <img src="images/plant250px2.jpg" style="width: 350px;"  alt="Ghost Plant">
+                                        <a type="button" class="picture" style="margin-top: 10px;">
+                                            <img src="images/plant250px2.jpg" alt="Ghost Plant 1" style="height: 60px; width: 70px;">
+                                        </a>
+                                        <a type="button" class="picture">
+                                            <img src="images/plant250px2.jpg" alt="Ghost Plant 2" style="height: 60px; width: 70px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="pricewrapper">
+                                        <div class="price">
+                                            <h3>Ghost Plant</h3>
+                                            <span class="newprice">
+                                                <span class="p"  style="font-size: 21px;">Php. 75.00</span>
+                                                <span class="sr-only">Sale Price</span>
+                                            </span>
+                                            <span class="oldprice">
+                                                <span class="p" style="text-decoration: line-through; color: dimgrey; font-size: 16px;">Php. 100.00</span>
+                                                <span class="sr-only">Regular Price</span>
+                                            </span>
+                                        </div>
+                                    </div><hr>
+                                    <div class="prod-details">
+                                        This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent.
+                                    </div>
+                                    <div class="number ml-auto">
+                                        <div><label  for="qty" style="font-weight: 700;">Quantity</label></div>
+                                        <span class="minus">-</span>
+                                        <input class="carmel" type="number" value="1">
+                                        <span class="plus">+</span>
+                                    </div>
+                                    <div class="addtocart">
+                                        <button data-mobile="true" data-hook="add-to-cart" class="atcbtnmodal btn" type="button"><span>Add to Cart</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal-->
+        </div>
+        <!--Product 3-->
+        <div class="col-12 col-sm-3 proditem">
+            <div class="card" id="prod3formodal" title="Quick View" role="button">
+                <img src="images/plant250px3.jpg" alt="succulent1">
+                <div class="card-body text-center">Succulent 3<br>Php. 100.00
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>     
+            </div>
+            <a href="#" data-name="Product 2" data-price="150" class="add-to-cart btn btn-info btn-block"  role="button">Add to Cart</a>
+
+            <!--Modal-->
+            <div id="prod3" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+                    <!--Modal Content-->
+                    <div class="modal-content">
+                        <button type="button" title="Close" class="close ml-auto" data-dismiss="modal" aria-label="Close" style="padding: 3px 10px 0px 0px">x</button>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="prodimage">
+                                        <img src="images/plant250px3.jpg" style="height: 450px; width: 350px;"  alt="Ghost Plant">
+                                        <a type="button" class="picture" style="margin-top: 10px;">
+                                            <img src="images/plant250px3.jpg" alt="Ghost Plant 1" style="height: 60px; width: 70px;">
+                                        </a>
+                                        <a type="button" class="picture">
+                                            <img src="images/plant250px3.jpg" alt="Ghost Plant 2" style="height: 60px; width: 70px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="pricewrapper">
+                                        <div class="price">
+                                            <h3>Ghost Plant</h3>
+                                            <span class="newprice">
+                                                <span class="p"  style="font-size: 21px;">Php. 75.00</span>
+                                                <span class="sr-only">Sale Price</span>
+                                            </span>
+                                            <span class="oldprice">
+                                                <span class="p" style="text-decoration: line-through; color: dimgrey; font-size: 16px;">Php. 100.00</span>
+                                                <span class="sr-only">Regular Price</span>
+                                            </span>
+                                        </div>
+                                    </div><hr>
+                                    <div class="prod-details">
+                                        This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent.
+                                    </div><br>
+                                    <div class="quantity buttons_added">
+                                        <div><label class="text-center" for="qty" style="font-weight: 700;">Quantity</label></div>
+                                        <input type="number" step="1" min="1" max="" name="quantity" value="1" class="input-text qty text" size="2" pattern="" inputmode="">
+                                    </div><br>
+                                    <div class="addtocart">
+                                        <button data-mobile="true" data-hook="add-to-cart" class="atcbtnmodal btn" type="button"><span>Add to Cart</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal-->
+        </div>
+        <!--Product 4-->
+        <div class="col-12 col-md-3 proditem">
+            <div class="card sad" id="prod4formodal" title="Quick View" role="button">
+               <img class="prod1" src="items/cacti/cac1.png" alt="succulent1">
+                <div class="card-body text-center">Cactus 1<br>Php. 85.00
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+            </div>
+            <button class="addtocard btn btn-info btn-block">Add to Cart</button>
+
+            <!--Modal-->
+            <div id="prod4" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+                    <!--Modal Content-->
+                    <div class="modal-content">
+                        <button type="button" title="Close" class="close ml-auto" data-dismiss="modal" aria-label="Close" style="padding: 3px 10px 0px 0px">x</button>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="prodimage">
+                                        <img src="items/cacti/cac1.png" style="width: 350px;"  alt="Ghost Plant">
+                                        <a type="button" class="picture" style="margin-top: 10px;">
+                                            <img src="items/cacti/cac1.png" alt="Ghost Plant 1" style="height: 60px; width: 70px;">
+                                        </a>
+                                        <a type="button" class="picture">
+                                            <img src="items/cacti/cac1.png" alt="Ghost Plant 2" style="height: 60px; width: 70px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="pricewrapper">
+                                        <div class="price">
+                                            <h3>Ghost Plant</h3>
+                                            <span class="newprice">
+                                                <span class="p"  style="font-size: 21px;">Php. 75.00</span>
+                                                <span class="sr-only">Sale Price</span>
+                                            </span>
+                                            <span class="oldprice">
+                                                <span class="p" style="text-decoration: line-through; color: dimgrey; font-size: 16px;">Php. 100.00</span>
+                                                <span class="sr-only">Regular Price</span>
+                                            </span>
+                                        </div>
+                                    </div><hr>
+                                    <div class="prod-details">
+                                        This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent.
+                                    </div><br>
+                                    <div class="quantity buttons_added">
+                                        <div><label class="text-center" for="qty" style="font-weight: 700;">Quantity</label></div>
+                                        <input type="number" step="1" min="1" max="" name="quantity" value="1" class="input-text qty text" size="2" pattern="" inputmode="">
+                                    </div><br>
+                                    <div class="addtocart">
+                                        <button data-mobile="true" data-hook="add-to-cart" class="atcbtnmodal btn" type="button"><span>Add to Cart</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal-->
+        </div>
+        <!--Product 5-->
+        <div class="col-12 col-md-3 proditem">
+            <div class="card sad" id="prod5formodal" title="Quick View" role="button">
+                <img src="items/cacti/cac2.jpg" alt="succulent1"> 
+                <div class="card-body text-center">Cactus 2<br>Php. 150.00
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+            </div>
+            <button class="addtocard btn btn-info btn-block">Add to Cart</button>
+
+            <!--Modal-->
+            <div id="prod5" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+                    <!--Modal Content-->
+                    <div class="modal-content">
+                        <button type="button" title="Close" class="close ml-auto" data-dismiss="modal" aria-label="Close" style="padding: 3px 10px 0px 0px">x</button>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="prodimage">
+                                        <img src="items/cacti/cac2.jpg" style=" width: 350px;"  alt="Ghost Plant">
+                                        <a type="button" class="picture" style="margin-top: 10px;">
+                                            <img src="items/cacti/cac2.jpg" alt="Ghost Plant 1" style="height: 60px; width: 70px;">
+                                        </a>
+                                        <a type="button" class="picture">
+                                            <img src="items/cacti/cac2.jpg" alt="Ghost Plant 2" style="height: 60px; width: 70px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="pricewrapper">
+                                        <div class="price">
+                                            <h3>Ghost Plant</h3>
+                                            <span class="newprice">
+                                                <span class="p"  style="font-size: 21px;">Php. 75.00</span>
+                                                <span class="sr-only">Sale Price</span>
+                                            </span>
+                                            <span class="oldprice">
+                                                <span class="p" style="text-decoration: line-through; color: dimgrey; font-size: 16px;">Php. 100.00</span>
+                                                <span class="sr-only">Regular Price</span>
+                                            </span>
+                                        </div>
+                                    </div><hr>
+                                    <div class="prod-details">
+                                        This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent.
+                                    </div><br>
+                                    <div class="quantity buttons_added">
+                                        <div><label class="text-center" for="qty" style="font-weight: 700;">Quantity</label></div>
+                                        <input type="number" step="1" min="1" max="" name="quantity" value="1" class="input-text qty text" size="2" pattern="" inputmode="">
+                                    </div><br>
+                                    <div class="addtocart">
+                                        <button data-mobile="true" data-hook="add-to-cart" class="atcbtnmodal btn" type="button"><span>Add to Cart</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal-->
+        </div>
+        <!--Product 6-->
+        <div class="col-12 col-md-3 proditem">
+            <div class="card sad"  id="prod6formodal" title="Quick View" role="button">
+                <img src="items/cacti/goldenbarrel.jpg" alt="Golden Barrel">
+                <div class="card-body text-center">Golden Barrel<br>Php. 100.00
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+            </div>
+            <button class="addtocard btn btn-info btn-block">Add to Cart</button>
+
+            <!--Modal-->
+            <div id="prod6" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+                    <!--Modal Content-->
+                    <div class="modal-content">
+                        <button type="button" class="close ml-auto" data-dismiss="modal" aria-label="Close" style="padding: 3px 10px 0px 0px">x</button>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="prodimage">
+                                        <img src="items/cacti/goldenbarrel.jpg" style="height: 400px; width: 350px;" alt="Golden Barrel">
+                                        
+                                        <button type="button" class="picture" style="margin-top: 10px;">
+                                            <img src="items/cacti/goldenbarrel.jpg" alt="Golden Barrel" style=" height: 50px; width: 50px;">
+                                        </button>
+    
+                                        <button type="button" class="picture">
+                                            <img src="items/cacti/goldenbarrel.jpg" alt="Golden Barrel" style=" height: 50px; width: 50px;">
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="title">
+                                        <h3>Golden Barrel</h3>
+                                    </div>
+                                    
+                                    <div class="price-wrapper">
+                                        <div class="price">
+                                            <span class="newprice">
+                                                
+                                                <span class="p"  style="font-size: 21px;">Php. 75.00</span>
+                                                <span class="sr-only">Sale Price</span>
+                                            </span>
+
+                                            <span class="oldprice">
+                                                <span class="p"   style="text-decoration: line-through; color: dimgrey; font-size: 16px;">Php. 100.00</span>
+                                                <span class="sr-only">Regular Price</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    
+                                    <div class="prod-details">
+                                        This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent.
+                                    </div><br>
+                                    
+                                    <div class="quantity buttons_added">
+                                        <div><label for="qty" style="font-weight: 700;">Quantity</label></div>
+                                        <input type="number" step="1" min="1" max="" name="quantity" value="1" title="qty" class="input-text qty text" size="2" pattern="" inputmode="">
+                                    </div><br>
+
+                                    <div class="addtocart">
+                                        <button data-mobile="true" data-hook="add-to-cart" class="addtocartbutton btn" type="button"><span>Add to Cart</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal-->
+        </div>
+        <!--Product 7-->
+        <div class="col-12 col-md-3 proditem">
+            <div class="card" id="prod7formodal" title="Quick View" role="button">
+                <img src="items/plants/plant1.jpg" alt="succulent1"> 
+                <div class="card-body text-center">Plant 1<br>Php. 100.00
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+            </div>
+            <button class="addtocard btn btn-info btn-block">Add to Cart</button>
+
+            <!--Modal-->
+            <div id="prod7" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+                    <!--Modal Content-->
+                    <div class="modal-content">
+                        <button type="button" title="Close" class="close ml-auto" data-dismiss="modal" aria-label="Close" style="padding: 3px 10px 0px 0px">x</button>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="prodimage">
+                                        <img src="items/cacti/cac1.png" style="height: 450px; width: 350px;"  alt="Ghost Plant">
+                                        <a type="button" class="picture" style="margin-top: 10px;">
+                                            <img src="items/cacti/cac1.png" alt="Ghost Plant 1" style="height: 60px; width: 70px;">
+                                        </a>
+                                        <a type="button" class="picture">
+                                            <img src="items/cacti/cac1.png" alt="Ghost Plant 2" style="height: 60px; width: 70px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="pricewrapper">
+                                        <div class="price">
+                                            <h3>Ghost Plant</h3>
+                                            <span class="newprice">
+                                                <span class="p"  style="font-size: 21px;">Php. 75.00</span>
+                                                <span class="sr-only">Sale Price</span>
+                                            </span>
+                                            <span class="oldprice">
+                                                <span class="p" style="text-decoration: line-through; color: dimgrey; font-size: 16px;">Php. 100.00</span>
+                                                <span class="sr-only">Regular Price</span>
+                                            </span>
+                                        </div>
+                                    </div><hr>
+                                    <div class="prod-details">
+                                        This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent.
+                                    </div><br>
+                                    <div class="quantity buttons_added">
+                                        <div><label class="text-center" for="qty" style="font-weight: 700;">Quantity</label></div>
+                                        <input type="number" step="1" min="1" max="" name="quantity" value="1" class="input-text qty text" size="2" pattern="" inputmode="">
+                                    </div><br>
+                                    <div class="addtocart">
+                                        <button data-mobile="true" data-hook="add-to-cart" class="atcbtnmodal btn" type="button"><span>Add to Cart</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal-->
+        </div>
+        <!--Product 8-->
+        <div class="col-12 col-md-3 proditem">
+            <div class="card" id="prod8formodal" title="Quick View" role="button">
+                <img src="items/plants/plant2.jpg" alt="succulent1"> 
+                <div class="card-body text-center">Plant 2<br>Php. 75.00
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+            </div>
+            <button class="addtocard btn btn-info btn-block">Add to Cart</button>
+
+            <!--Modal-->
+            <div id="prod8" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+                    <!--Modal Content-->
+                    <div class="modal-content">
+                        <button type="button" title="Close" class="close ml-auto" data-dismiss="modal" aria-label="Close" style="padding: 3px 10px 0px 0px">x</button>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="prodimage">
+                                        <img src="items/cacti/cac1.png" style="height: 450px; width: 350px;"  alt="Ghost Plant">
+                                        <a type="button" class="picture" style="margin-top: 10px;">
+                                            <img src="items/cacti/cac1.png" alt="Ghost Plant 1" style="height: 60px; width: 70px;">
+                                        </a>
+                                        <a type="button" class="picture">
+                                            <img src="items/cacti/cac1.png" alt="Ghost Plant 2" style="height: 60px; width: 70px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="pricewrapper">
+                                        <div class="price">
+                                            <h3>Ghost Plant</h3>
+                                            <span class="newprice">
+                                                <span class="p"  style="font-size: 21px;">Php. 75.00</span>
+                                                <span class="sr-only">Sale Price</span>
+                                            </span>
+                                            <span class="oldprice">
+                                                <span class="p" style="text-decoration: line-through; color: dimgrey; font-size: 16px;">Php. 100.00</span>
+                                                <span class="sr-only">Regular Price</span>
+                                            </span>
+                                        </div>
+                                    </div><hr>
+                                    <div class="prod-details">
+                                        This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent.
+                                    </div><br>
+                                    <div class="quantity buttons_added">
+                                        <div><label class="text-center" for="qty" style="font-weight: 700;">Quantity</label></div>
+                                        <input type="number" step="1" min="1" max="" name="quantity" value="1" class="input-text qty text" size="2" pattern="" inputmode="">
+                                    </div><br>
+                                    <div class="addtocart">
+                                        <button data-mobile="true" data-hook="add-to-cart" class="atcbtnmodal btn" type="button"><span>Add to Cart</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal-->
+        </div>
+        <!--Product 9-->
+        <div class="col-12 col-md-3 proditem">
+            <div class="card" id="prod9formodal" title="Quick View" role="button">
+                <img src="items/plants/plant3.jpg" alt="succulent1"> 
+                <div class="card-body text-center">Plant 3<br>Php. 75.00
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+            </div>
+            <button class="addtocard btn btn-info btn-block">Add to Cart</button>
+
+            <!--Modal-->
+            <div id="prod9" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+                    <!--Modal Content-->
+                    <div class="modal-content">
+                        <button type="button" title="Close" class="close ml-auto" data-dismiss="modal" aria-label="Close" style="padding: 3px 10px 0px 0px">x</button>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="prodimage">
+                                        <img src="items/cacti/cac1.png" style="height: 450px; width: 350px;"  alt="Ghost Plant">
+                                        <a type="button" class="picture" style="margin-top: 10px;">
+                                            <img src="items/cacti/cac1.png" alt="Ghost Plant 1" style="height: 60px; width: 70px;">
+                                        </a>
+                                        <a type="button" class="picture">
+                                            <img src="items/cacti/cac1.png" alt="Ghost Plant 2" style="height: 60px; width: 70px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="pricewrapper">
+                                        <div class="price">
+                                            <h3>Ghost Plant</h3>
+                                            <span class="newprice">
+                                                <span class="p"  style="font-size: 21px;">Php. 75.00</span>
+                                                <span class="sr-only">Sale Price</span>
+                                            </span>
+                                            <span class="oldprice">
+                                                <span class="p" style="text-decoration: line-through; color: dimgrey; font-size: 16px;">Php. 100.00</span>
+                                                <span class="sr-only">Regular Price</span>
+                                            </span>
+                                        </div>
+                                    </div><hr>
+                                    <div class="prod-details">
+                                        This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent.
+                                    </div><br>
+                                    <div class="quantity buttons_added">
+                                        <div><label class="text-center" for="qty" style="font-weight: 700;">Quantity</label></div>
+                                        <input type="number" step="1" min="1" max="" name="quantity" value="1" class="input-text qty text" size="2" pattern="" inputmode="">
+                                    </div><br>
+                                    <div class="addtocart">
+                                        <button data-mobile="true" data-hook="add-to-cart" class="atcbtnmodal btn" type="button"><span>Add to Cart</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal-->
+        </div>
+        <!--Product 10-->
+        <div class="col-12 col-md-3 proditem">
+            <div class="card" id="prod10formodal" title="Quick View" role="button">
+                <img src="items/plants/plant3.jpg" alt="succulent1"> 
+                <div class="card-body text-center">Plant 3<br>Php. 75.00
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+            </div>
+            <button class="addtocard btn btn-info btn-block">Add to Cart</button>
+
+            <!--Modal-->
+            <div id="prod10" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+                    <!--Modal Content-->
+                    <div class="modal-content">
+                        <button type="button" title="Close" class="close ml-auto" data-dismiss="modal" aria-label="Close" style="padding: 3px 10px 0px 0px">x</button>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="prodimage">
+                                        <img src="items/cacti/cac1.png" style="height: 450px; width: 350px;"  alt="Ghost Plant">
+                                        <a type="button" class="picture" style="margin-top: 10px;">
+                                            <img src="items/cacti/cac1.png" alt="Ghost Plant 1" style="height: 60px; width: 70px;">
+                                        </a>
+                                        <a type="button" class="picture">
+                                            <img src="items/cacti/cac1.png" alt="Ghost Plant 2" style="height: 60px; width: 70px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="pricewrapper">
+                                        <div class="price">
+                                            <h3>Ghost Plant</h3>
+                                            <span class="newprice">
+                                                <span class="p"  style="font-size: 21px;">Php. 75.00</span>
+                                                <span class="sr-only">Sale Price</span>
+                                            </span>
+                                            <span class="oldprice">
+                                                <span class="p" style="text-decoration: line-through; color: dimgrey; font-size: 16px;">Php. 100.00</span>
+                                                <span class="sr-only">Regular Price</span>
+                                            </span>
+                                        </div>
+                                    </div><hr>
+                                    <div class="prod-details">
+                                        This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent.
+                                    </div><br>
+                                    <div class="quantity buttons_added">
+                                        <div><label class="text-center" for="qty" style="font-weight: 700;">Quantity</label></div>
+                                        <input type="number" step="1" min="1" max="" name="quantity" value="1" class="input-text qty text" size="2" pattern="" inputmode="">
+                                    </div><br>
+                                    <div class="addtocart">
+                                        <button data-mobile="true" data-hook="add-to-cart" class="atcbtnmodal btn" type="button"><span>Add to Cart</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal-->
+        </div>
+        <!--Product 11-->
+        <div class="col-12 col-md-3 proditem">
+            <div class="card" id="prod11formodal" title="Quick View" role="button">
+                <img src="items/plants/plant3.jpg" alt="succulent1"> 
+                <div class="card-body text-center">Plant 3<br>Php. 75.00
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+            </div>
+            <button class="addtocard btn btn-info btn-block">Add to Cart</button>
+
+            <!--Modal-->
+            <div id="prod11" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+                    <!--Modal Content-->
+                    <div class="modal-content">
+                        <button type="button" title="Close" class="close ml-auto" data-dismiss="modal" aria-label="Close" style="padding: 3px 10px 0px 0px">x</button>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="prodimage">
+                                        <img src="items/cacti/cac1.png" style="height: 450px; width: 350px;"  alt="Ghost Plant">
+                                        <a type="button" class="picture" style="margin-top: 10px;">
+                                            <img src="items/cacti/cac1.png" alt="Ghost Plant 1" style="height: 60px; width: 70px;">
+                                        </a>
+                                        <a type="button" class="picture">
+                                            <img src="items/cacti/cac1.png" alt="Ghost Plant 2" style="height: 60px; width: 70px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="pricewrapper">
+                                        <div class="price">
+                                            <h3>Ghost Plant</h3>
+                                            <span class="newprice">
+                                                <span class="p"  style="font-size: 21px;">Php. 75.00</span>
+                                                <span class="sr-only">Sale Price</span>
+                                            </span>
+                                            <span class="oldprice">
+                                                <span class="p" style="text-decoration: line-through; color: dimgrey; font-size: 16px;">Php. 100.00</span>
+                                                <span class="sr-only">Regular Price</span>
+                                            </span>
+                                        </div>
+                                    </div><hr>
+                                    <div class="prod-details">
+                                        This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent.
+                                    </div><br>
+                                    <div class="quantity buttons_added">
+                                        <div><label class="text-center" for="qty" style="font-weight: 700;">Quantity</label></div>
+                                        <input type="number" step="1" min="1" max="" name="quantity" value="1" class="input-text qty text" size="2" pattern="" inputmode="">
+                                    </div><br>
+                                    <div class="addtocart">
+                                        <button data-mobile="true" data-hook="add-to-cart" class="atcbtnmodal btn" type="button"><span>Add to Cart</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal-->
+        </div>
+        <!--Product 12-->
+        <div class="col-12 col-md-3 proditem">
+            <div class="card" id="prod12formodal" title="Quick View" role="button">
+                <img src="items/plants/plant3.jpg" alt="succulent1"> 
+                <div class="card-body text-center">Plant 3<br>Php. 75.00
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+            </div>
+            <button class="addtocard btn btn-info btn-block">Add to Cart</button>
+
+            <!--Modal-->
+            <div id="prod12" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+                    <!--Modal Content-->
+                    <div class="modal-content">
+                        <button type="button" title="Close" class="close ml-auto" data-dismiss="modal" aria-label="Close" style="padding: 3px 10px 0px 0px">x</button>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="prodimage">
+                                        <img src="items/cacti/cac1.png" style="height: 450px; width: 350px;"  alt="Ghost Plant">
+                                        <a type="button" class="picture" style="margin-top: 10px;">
+                                            <img src="items/cacti/cac1.png" alt="Ghost Plant 1" style="height: 60px; width: 70px;">
+                                        </a>
+                                        <a type="button" class="picture">
+                                            <img src="items/cacti/cac1.png" alt="Ghost Plant 2" style="height: 60px; width: 70px;">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="pricewrapper">
+                                        <div class="price">
+                                            <h3>Ghost Plant</h3>
+                                            <span class="newprice">
+                                                <span class="p"  style="font-size: 21px;">Php. 75.00</span>
+                                                <span class="sr-only">Sale Price</span>
+                                            </span>
+                                            <span class="oldprice">
+                                                <span class="p" style="text-decoration: line-through; color: dimgrey; font-size: 16px;">Php. 100.00</span>
+                                                <span class="sr-only">Regular Price</span>
+                                            </span>
+                                        </div>
+                                    </div><hr>
+                                    <div class="prod-details">
+                                        This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent. This is a sample Succulent.
+                                    </div><br>
+                                    <div class="quantity buttons_added">
+                                        <div><label class="text-center" for="qty" style="font-weight: 700;">Quantity</label></div>
+                                        <input type="number" step="1" min="1" max="" name="quantity" value="1" class="input-text qty text" size="2" pattern="" inputmode="">
+                                    </div><br>
+                                    <div class="addtocart">
+                                        <button data-mobile="true" data-hook="add-to-cart" class="atcbtnmodal btn" type="button"><span>Add to Cart</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Modal-->
+        </div>
+    </div>
+</div>
+
+<div class="container text-center" style="display: inline-block;">
+    <div class="row row-content nextprev align-items-center">
+        <div class="col align-items-center"> 
+            <div class="proditem">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">previous</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!--Footer-->
+<footer class="footer" style="display:inline-block; width: 100%;">
+    <div class="container-fluid  align-items-center">
+        <div class="row">             
+            <div class="col-12 col-sm-3">
+                <div class="text-center">
+                    <h4 class="text-center title" style="letter-spacing: 0.45em;">OPENING HOURS</h4><br>
+                    <p>Mon-Fri: &nbsp; <span class="ophrs" style="color:#AFDEDC;">07:00am - 05:00pm</span><br>
+                    Sat-Sun: &nbsp; <span class="ophrs" style="color:#AFDEDC;">06:00am - 07:00pm</span></p>
+                </div><br>
+            </div>
+            <div class="col-12 col-sm-5 align-self-center">
+                <div class="text-center">
+                    <h4 class="text-center title" style="letter-spacing: 0.45em;">OUR STORE</h4><br>
+                    <address>Babag II, Lapu-Lapu City,<br>Cebu City, Philippines <br>
+                        <i class="fa fa-phone fa-lg"></i> : +63 931 023 2183 <br>
+                        <i class="fa fa-envelope fa-lg"></i> : <a href="mailto:kristeljuen@gmail.com" style="color: #AFDEDC;">kstore@gmail.com</a>
+                    </address>
+                </div><br>
+            </div>
+            <div class="col-12 col-sm-4 align-self-center">
+                <div class="text-center">
+                    <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+                </div><br>
+            </div>
+       </div><br>
+       <div class="row justify-content-center">             
+            <div class="col-auto">
+                <p>© KRISTEL JUEN</p>
+            </div>
+       </div>
+    </div>
+</footer>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="shopjs/shopscript.js"></script>
+
+<script src="js/myjs.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('#mycarousel').carousel({interval:4000});
+        
+        $("#loginButton").click(function(){
+            $("#loginModal").modal("toggle");
+        });
+    });
+</script>
+</body>
+</html>
